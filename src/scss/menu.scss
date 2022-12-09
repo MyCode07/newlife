@@ -1,0 +1,108 @@
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 184px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    filter: drop-shadow(0px 203px 81px rgba(0, 0, 0, 0.01)) drop-shadow(0px 114px 68px rgba(0, 0, 0, 0.03))
+        drop-shadow(0px 51px 51px rgba(0, 0, 0, 0.04)) drop-shadow(0px 13px 28px rgba(0, 0, 0, 0.05))
+        drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.05));
+    padding-top: 70px;
+
+    @media (max-width: 1200px) {
+        top: unset;
+        bottom: 0;
+        height: calc(100vh - 80px);
+        width: 100%;
+        z-index: 100;
+        padding-top: 30px;
+        overflow-y: auto;
+
+        visibility: hidden;
+        transform: translate(0, 150%);
+        transition: all 0.3s ease 0s;
+
+        &._open {
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        height: calc(100vh - 60px);
+    }
+
+    // .menu__logo
+
+    &__logo {
+        img,
+        svg {
+            display: block;
+            margin-inline: auto;
+        }
+    }
+
+    nav {
+        flex: 1 1 100%;
+        margin: 80px 0 40px 0;
+
+        @media (max-width: 1200px) {
+            margin: 20px auto 20px auto;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        ul {
+            li {
+                a {
+                    transition: all 0.3s ease 0s;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 1.2;
+                    color: #21170a;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 22px 24px 22px 22px;
+                    background-color: #fff;
+
+                    @media (max-width: 1024px) {
+                        padding: 15px;
+                    }
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            background-color: #fff0db;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .menu__contacts
+
+    &__contacts {
+        height: 59px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 1.18;
+        text-align: center;
+        color: #ffffff;
+       
+    }
+}
+
+
+
