@@ -22,6 +22,10 @@ body {
     &::-webkit-scrollbar-thumb {
         background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%);
     }
+
+    &._noscroll {
+        overflow: hidden;
+    }
 }
 
 .swiper-grid > .swiper-wrapper {

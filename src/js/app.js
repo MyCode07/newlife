@@ -5,12 +5,9 @@ const mobileHistoryElem = document.querySelector('.mobile-history');
 
 if (formAdaptiv && window.innerWidth <= 1300) {
     mobileHistoryElem.before(formAdaptiv);
-    console.log('aa');
 }
 
 const newsItems = document.querySelectorAll('.mailinglists__news-item');
-
-
 if (newsItems.length && window.innerWidth <= 768) {
     const newsElement = document.querySelector('.mailinglists__news');
     const newsElementBody = document.querySelector('.mailinglists__news-body');
@@ -70,9 +67,7 @@ if (newsItems.length && window.innerWidth <= 768) {
     })
 }
 
-
 const linksRowLinks = document.querySelectorAll('.links__row');
-
 if (linksRowLinks.length) {
     new Swiper('.links__row .swiper', {
 
@@ -92,7 +87,6 @@ if (linksRowLinks.length) {
 }
 
 const books = document.querySelectorAll('.book');
-
 if (books.length && window.innerWidth <= 600) {
     books.forEach(book => {
         book.querySelector('img').after(book.querySelector('h3'))
@@ -100,17 +94,16 @@ if (books.length && window.innerWidth <= 600) {
 }
 
 const testTitle = document.querySelector('.test__title');
-
 if (testTitle && window.innerWidth <= 992) {
     testTitle.after(document.querySelector('.test__image'));
 }
 
 const burger = document.querySelector('.burger');
-
 if (burger) {
     const menu = document.querySelector('.menu');
     burger.addEventListener('click', function () {
         menu.classList.toggle('_open');
         burger.classList.toggle('_active');
+        document.body.classList.toggle('_noscroll');
     })
 }
