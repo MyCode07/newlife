@@ -17,21 +17,20 @@
         top: unset;
         bottom: 0;
         width: 100%;
-        z-index: 99;
-        padding-top: 100px;
+        z-index: 999;
+        padding-top: 150px;
         overflow-y: auto;
 
-        visibility: hidden;
-        transform: translate(0, 150%);
-        transition: all 0.3s ease 0s;
+        transform: translate3d(0, 110%, 0);
+        transition: transform 0.3s ease 0s;
+        pointer-events: none;
+        will-change: transform;
 
         &._open {
-            visibility: visible;
-            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            pointer-events: all;
         }
     }
-
-  
 
     // .menu__logo
 
@@ -96,7 +95,6 @@
         font-size: 23px;
         line-height: 1.18;
         text-align: center;
-        color: #ffffff;
-       
+        color: #ffffff !important;
     }
 }

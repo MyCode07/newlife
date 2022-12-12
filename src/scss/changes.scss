@@ -1,0 +1,148 @@
+body {
+    background-color: unset !important;
+}
+
+.pw_map-wrap {
+    border: unset !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.pw_map_legend ul.markers-map-legend li.legend-child {
+    flex: unset !important;
+    padding: 0 !important;
+}
+
+.marker-group {
+    &.group-106 {
+        background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%),
+            linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%), #21170a;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        &.marker-group-active {
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background-clip: unset;
+            color: #fff !important;
+        }
+    }
+
+    &.group-107 {
+        background: linear-gradient(139.18deg, #05ff00 0%, #04c900 93.68%), #05ff00;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        &.marker-group-active {
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background-clip: unset;
+            color: #fff !important;
+        }
+    }
+    color: transparent !important;
+
+    max-width: 164px;
+    height: 41px;
+    width: 100%;
+
+    border: 1px solid #e6e6e6;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    i {
+        display: none;
+    }
+}
+
+.pw_map_legend {
+    cursor: default;
+    margin: 0;
+    padding: 19px 26px;
+    width: 100%;
+    text-align: left;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        padding: 15px;
+    }
+}
+
+.pw_map_legend ul.markers-map-legend {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.pw_map_legend .legend-header {
+    margin: 0 0 19px 0;
+
+    @media (max-width: 1024px) {
+        margin: 0 0 15px 0;
+    }
+}
+
+.pw_map_legend .legend-header .legend-title {
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.pw_map_legend .legend-header .legend-subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #949494;
+    margin-bottom: 19px;
+}
+
+.markers-list .markers-city .city-name {
+    padding: 0 15px 0 26px;
+
+    @media (max-width: 1024px) {
+        padding: 0 15px;
+    }
+}
+
+.markers-list .markers-city .city-markers .marker-data {
+    @media (max-width: 1024px) {
+        padding: 15px;
+    }
+}
+
+.story-author,
+.story-tag {
+    margin-top: 10px;
+}
+
+.tags-list {
+    margin-left: 0 !important;
+}

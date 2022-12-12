@@ -172,9 +172,10 @@ input[type="submit"] {
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 100;
-    transition: all 0.3s ease 0s;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 1000;
+    transition: transform 0.3s ease 0s;
+    will-change: transform;
 
     @media (max-width: 600px) {
         width: 40px;
@@ -183,41 +184,37 @@ input[type="submit"] {
 
     & > :first-child {
         top: 0;
-        transform: translate(-15%, 0%);
+        transform: translate3d(-15%, 0%, 0);
     }
     & > :nth-child(2) {
         top: 33%;
-        transform: translate(15%, -25%);
+        transform: translate3d(15%, -25%, 0);
     }
     & > :nth-child(3) {
         top: 66%;
-        transform: translate(-15%, -100%);
+        transform: translate3d(-15%, -100%, 0);
     }
     & > :last-child {
         top: 100%;
-        transform: translate(15%, -100%);
+        transform: translate3d(15%, -100%, 0);
     }
 
     &._active {
-        transform: translate(-50%, 0) rotate(-90deg);
+        transform: translate3d(-50%, 0, 0) rotate(-90deg);
 
         & > :first-child {
             top: 50%;
-            transform: translate(0%, -50%) rotate(-45deg);
+            transform: translate3d(0%, -50%, 0) rotate(-45deg);
         }
         & > :nth-child(2) {
-            top: 33%;
-            transform: translate(0%, -25%);
             opacity: 0;
         }
         & > :nth-child(3) {
-            top: 66%;
-            transform: translate(0%, -50%);
             opacity: 0;
         }
         & > :last-child {
             top: 50%;
-            transform: translate(0%, -50%) rotate(45deg);
+            transform: translate3d(0%, -50%, 0) rotate(45deg);
         }
     }
 
@@ -230,7 +227,8 @@ input[type="submit"] {
         border-radius: 2px;
         display: block;
         pointer-events: none;
-        transition: all 0.3s ease 0s;
+        transition: transform 0.3s ease 0s;
+        will-change: transform;
 
         @media (max-width: 600px) {
             height: 2px;
@@ -255,3 +253,9 @@ input[type="submit"] {
 
 // contacts
 @import "contacts";
+
+// news
+@import "news";
+
+// changes
+@import "changes";
