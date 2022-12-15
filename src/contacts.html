@@ -1,38 +1,50 @@
 @@include('html/header.html')
 
 <main>
-    <div class="contacts" style="background-image: url('img/logos/contacts.png');">
+    <div class="contacts">
         <div class="contacts__block">
-            <header>
-                <h1 class="_gradient-color">Задать вопрос <img src="img/logos/mang-three.png" alt=""></h1>
-                <div class="breadcambs">
-                    <ul>
-                        <li>
-                            <a href="">Главная</a>
-                        </li>
-                        <span>/</span>
-                        <li>Задать вопрос</li>
-                    </ul>
-                </div>
-                <p class="contacts__descriptoin">Задайте вопрос участникам нашей группы взаимопомощи или специалистам, которых мы приглашаем на
-                    встречи.
-                    Присоединяйтесь
-                    к нашему сообществу в WhatsApp, приходите <a class="_gradient-color" href="/">на встречу</a> или отправьте вопрос через
-                    форму.
-                    Оставьте
-                    контактный email, если
-                    хотите, чтобы мы вам ответили.
-                </p>
-            </header>
-            <form action="">
-                <input type="text" placeholder="Имя ( не отображается на сайте )">
-                <input type="email" placeholder="email или другой контакт ( не отображается на сайте )">
-                <textarea placeholder="Вопрос:"></textarea>
-                <div class="submit">
-                    <input type="submit" class="_gradient" value="Отправить">
-                    <p>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-                </div>
-            </form>
+            <div class="contacts__form">
+                <header>
+                    <div class="page-title">
+                        <h1 class="_gradient-color">Задать вопрос </h1>
+                        <span><img src="img/question.png" alt=""></span>
+                    </div>
+
+                    <div class="breadcambs">
+                        <ul>
+                            <li>
+                                <a href="">Главная</a>
+                            </li>
+                            <span>/</span>
+                            <li>Задать вопрос</li>
+                        </ul>
+                    </div>
+                    <p class="contacts__descriptoin">Задайте вопрос участникам нашей группы взаимопомощи или
+                        специалистам,
+                        которых мы приглашаем на
+                        встречи.
+                        Присоединяйтесь
+                        к нашему сообществу в WhatsApp, приходите <a class="_gradient-color" href="/">на встречу</a> или
+                        отправьте вопрос через
+                        форму.
+                        Оставьте
+                        контактный email, если
+                        хотите, чтобы мы вам ответили.
+                    </p>
+                </header>
+                <form action="">
+                    <input type="text" placeholder="Имя ( не отображается на сайте )">
+                    <input type="email" placeholder="email или другой контакт ( не отображается на сайте )">
+                    <textarea placeholder="Вопрос:"></textarea>
+                    <div class="submit">
+                        <input type="submit" class="_gradient" value="Отправить">
+                        <p>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                    </div>
+                </form>
+            </div>
+            <div class="contacts__form-image">
+                <img src="img/logos/contacts.png" alt="">
+            </div>
         </div>
     </div>
 </main>

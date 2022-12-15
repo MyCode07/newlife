@@ -77,6 +77,19 @@
                             background-color: #fff0db;
                         }
                     }
+
+                    span {
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 23px;
+                            height: 23px;
+                        }
+                    }
                 }
             }
         }

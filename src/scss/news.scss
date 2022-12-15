@@ -30,7 +30,8 @@
             border-right: 0px solid rgba(0, 0, 0, 0.1);
         }
 
-        button {
+        button,
+        a {
             width: 125px;
             height: 59px;
             display: flex;
@@ -78,7 +79,6 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
 
         @media (max-width: 992px) {
             display: block;
@@ -86,7 +86,18 @@
 
         & > :not(:first-child),
         & > :not(:nth-child(2)) {
-            border-top: 0px solid rgba(0, 0, 0, 0.1) !important;
+            border-top: 0 !important;
+        }
+
+        & > :first-child,
+        & > :nth-child(2) {
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        }
+
+        @media (max-width: 992px) {
+            & > :nth-child(2) {
+                border-top: 0 !important;
+            }
         }
 
         & > :nth-child(2n) {
@@ -106,17 +117,11 @@
 
         ul {
             width: 100%;
-            max-width: 264px;
+            display: flex;
+            flex-wrap: wrap;
 
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 40px);
-            grid-gap: 16px;
-
-            @media (max-width: 768px) {
-                grid-template-columns: repeat(auto-fill, 30px);
-                grid-gap: 10px;
-
-                max-width: 190px;
+            & > :not(:last-child) {
+                margin-right: 16px;
             }
 
             li {
@@ -125,32 +130,15 @@
                 font-size: 18px;
                 line-height: 1.18;
                 color: #000000;
-                width: 40px;
                 height: 40px;
-                flex: 0 0 40px;
+                width: fit-content;
 
                 @media (max-width: 768px) {
-                    width: 30px;
                     height: 30px;
+                    font-size: 16px;
                 }
 
                 a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    color: inherit;
-                    line-height: inherit;
-                    background: #fff;
-                    transition: all 0.3s ease 0s;
-
-                    &._active {
-                        background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%);
-                        color: #ffffff;
-                    }
-
                     @media (any-hover: hover) {
                         &:hover {
                             background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%);
@@ -158,69 +146,116 @@
                         }
                     }
                 }
-            }
-        }
-    }
 
-    .page-action {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+                a,
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    color: inherit;
+                    line-height: inherit;
+                    transition: all 0.3s ease 0s;
 
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 1.18;
-        color: #000000;
-        position: relative;
+                    @media (max-width: 768px) {
+                        width: 30px;
+                        height: 30px;
+                    }
 
-        @media (max-width: 768px) {
-            font-size: 14px;
-        }
+                    &.current {
+                        background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%);
+                        color: #ffffff;
+                    }
 
-        &:before {
-            position: absolute;
-            content: "";
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #000;
-            max-width: 0;
-            transition: all 0.3s ease 0s;
-        }
+                    &.prev,
+                    &.next {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
-        @media (any-hover: hover) {
-            &:hover {
-                &:before {
-                    max-width: 100%;
+                        width: 131px;
+
+                        @media (max-width: 768px) {
+                            width: 124px;
+                        }
+
+                        span {
+                            flex: 0 0 112px;
+                            width: 112px;
+                        }
+
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 18px;
+                        line-height: 1.18;
+                        color: #000000;
+                        position: relative;
+
+                        @media (max-width: 768px) {
+                            font-size: 14px;
+                        }
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #000;
+                            max-width: 0;
+                            transition: all 0.3s ease 0s;
+                        }
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                background: none !important;
+                                color: #000000;
+
+                                &:before {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+
+                        img {
+                            margin-left: 13px;
+                            @media (max-width: 768px) {
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+
+                    &.prev {
+                        margin-right: 29px;
+                        flex-direction: row-reverse;
+
+                        img {
+                            margin-left: 0;
+                            margin-right: 13px;
+                            transform: rotate(180deg);
+
+                            @media (max-width: 768px) {
+                                margin-right: 6px;
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &.next {
+                        margin-left: 29px;
+
+                        @media (max-width: 768px) {
+                            margin-left: 10px;
+                        }
+                    }
                 }
             }
-        }
-
-        img {
-            margin-left: 13px;
-
-            @media (max-width:768px){
-                margin-left: 6px;
-            }
-        }
-    }
-
-    .prev-page {
-        margin-right: 29px;
-        display: none;
-
-        @media (max-width: 768px) {
-            margin-right: 10px;
-        }
-    }
-
-    .next-page {
-        margin-left: 29px;
-
-        @media (max-width: 768px) {
-            margin-left: 10px;
         }
     }
 
@@ -239,10 +274,6 @@
                 &:hover {
                     background-color: #f0f0f0;
                 }
-            }
-
-            @media (min-width: 769px) {
-                border-top: none;
             }
 
             @media (max-width: 768px) {
@@ -293,4 +324,3 @@
         }
     }
 }
-

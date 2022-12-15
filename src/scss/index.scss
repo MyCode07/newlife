@@ -307,53 +307,88 @@
             align-items: center;
         }
 
-        &:before {
+        span {
             position: absolute;
-            content: "";
             top: 16px;
             right: 22px;
             width: 58px;
             height: 58px;
-            background-repeat: no-repeat;
-            background-position: right;
-            background-size: 58px 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
 
             @media (max-width: 768px) {
-                background-size: 40px 40px;
+                width: 40px;
+                height: 40px;
             }
         }
 
-        &:nth-child(1) {
-            @media (max-width: 1024px) {
+        &:first-child {
+            span {
+                background-color: #ffe2b9;
+
+                @media (max-width: 1300px) {
+                    background-color: #fff3e0;
+                }
+
+                @media (max-width: 425px) {
+                    background-color: #fff3e0;
+                }
+            }
+
+            @media (max-width: 1300px) {
                 background: #fffaf0;
             }
 
             @media (max-width: 425px) {
                 background: #fffaf0;
-            }
-
-            &:before {
-                background-image: url("@img/logos/mang-one.png");
             }
         }
 
         &:nth-child(2) {
             background: #fffaf0;
 
-            @media (max-width: 1024px) {
+            span {
+                background-color: #fff3e0;
+
+                @media (max-width: 1300px) {
+                    background-color: #ffe2b9;
+                }
+
+                @media (max-width: 425px) {
+                    background-color: #ffe2b9;
+                }
+            }
+
+            @media (max-width: 1300px) {
                 background: #fff0db;
             }
 
-            &:before {
-                background-image: url("@img/logos/mailinlist-two.png");
+            @media (max-width: 425px) {
+                background: #fff0db;
             }
         }
 
         &:nth-child(3) {
             background: #fffaf0;
 
-            &:before {
-                background-image: url("@img/logos/mang-three.png");
+            span {
+                background-color: #fff3e0;
+
+                @media (max-width: 768px) {
+                    background-color: #ffe2b9;
+                }
+
+                @media (max-width: 425px) {
+                    background-color: #fff3e0;
+                }
             }
 
             @media (max-width: 768px) {
@@ -365,13 +400,17 @@
             }
         }
 
-        &:nth-child(4) {
-            &:before {
-                background-image: url("@img/logos/mailinlist-four.png");
-            }
+        &:last-child {
+            span {
+                background-color: #ffe2b9;
 
-            @media (max-width: 1024px) {
-                background: #fff0db;
+                @media (max-width: 768px) {
+                    background-color: #fff3e0;
+                }
+
+                @media (max-width: 425px) {
+                    background-color: #ffe2b9;
+                }
             }
 
             @media (max-width: 768px) {
@@ -719,9 +758,17 @@
         .swiper-wrapper {
             & > :nth-child(2n + 1) {
                 background: #f0f0f0;
+
+                span {
+                    background-color: #fff;
+                }
             }
             & > :nth-child(2n) {
                 background: #ffffff;
+
+                span {
+                    background-color: #f0f0f0;
+                }
             }
         }
 
@@ -736,6 +783,10 @@
             @media (any-hover: hover) {
                 &:hover {
                     background: linear-gradient(81.52deg, #f5c047 0%, #df4b41 100%) !important;
+
+                    span {
+                        background-color: #ffcb7b !important;
+                    }
                 }
             }
 
@@ -743,12 +794,23 @@
                 width: 100%;
             }
 
-            img {
+            span {
                 margin-right: 9px;
                 width: 37px;
                 height: 37px;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease 0s;
+
+                img {
+                    width: 21px;
+                    height: 21px;
+                }
             }
-            span {
+            label {
                 white-space: nowrap;
                 font-style: normal;
                 font-weight: 400;

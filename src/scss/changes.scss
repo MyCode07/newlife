@@ -146,3 +146,13 @@ body {
 .tags-list {
     margin-left: 0 !important;
 }
+
+.single-body__footer-desktop {
+    display: block;
+    border-top: 1px solid #dfdfdf;
+    padding: 16px 0;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

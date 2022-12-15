@@ -14,33 +14,45 @@
     }
 
     @media (max-width: 1024px) {
-        padding: 50px 15px;
+        padding: 75px 15px;
     }
 
+    @media (max-width: 768px) {
+        background-image: url("@img/logos/contacts.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     // .contacts__block
 
     &__block {
-        padding: 71px 84px 60px 67px;
-        max-width: 832px;
         width: 100%;
+        max-width: 1154px;
+
+        display: flex;
 
         background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(50.5px);
+
+        filter: drop-shadow(0px 384.667px 154.221px rgba(0, 0, 0, 0.01))
+            drop-shadow(0px 216.264px 129.404px rgba(0, 0, 0, 0.05))
+            drop-shadow(0px 96.6098px 96.6098px rgba(0, 0, 0, 0.09))
+            drop-shadow(0px 23.9309px 53.1797px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
         @media (max-width: 1200px) {
-            margin-inline: auto;
-            padding: 50px;
         }
 
         @media (max-width: 1024px) {
-            padding: 50px 20px;
         }
     }
 
     h1 {
         display: flex;
         align-items: center;
-        margin: 0;
+        font-size: 36px;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
 
         img,
         svg {
@@ -53,24 +65,19 @@
     // .contacts__descriptoin
 
     &__descriptoin {
-        margin-top: 54px;
+        margin-top: 48px;
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.2;
         color: #949494;
 
         @media (max-width: 1024px) {
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
         @media (max-width: 768px) {
             margin-top: 25px;
-            font-size: 16px;
-        }
-
-        @media (max-width: 600px) {
-            font-size: 14px;
         }
 
         a {
@@ -88,15 +95,47 @@
         }
     }
 
+    &__form {
+        padding: 51px 36px 59px 56px;
+        flex: 0 0 50%;
+        width: 50%;
+
+        @media (max-width: 1024px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 30px 15px;
+            width: 100%;
+            flex: unset;
+        }
+
+        &-image {
+            width: 50%;
+            flex: 0 0 50%;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     form {
-        margin-top: 58px;
+        margin-top: 48px;
 
         @media (max-width: 600px) {
             margin-top: 40px;
         }
 
         input:not([type="submit"]) {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             border-bottom: 1px solid #21170a;
             padding-bottom: 8px;
             width: 100%;
@@ -114,8 +153,8 @@
         textarea {
             resize: none;
 
-            margin-top: 36px;
-            margin-bottom: 40px;
+            margin-top: 32px;
+            margin-bottom: 35px;
 
             font-style: normal;
             font-weight: 400;
@@ -123,7 +162,7 @@
             line-height: 1.15;
             color: #949494;
             padding: 16px;
-            min-height: 116px;
+            min-height: 102px;
             width: 100%;
             background-color: #e4e4e4;
 
@@ -143,8 +182,11 @@
             justify-content: space-between;
 
             input {
-                width: 320px;
-                height: 50px;
+                width: 283px;
+                width: 100%;
+                max-width: 283px;
+
+                height: 44px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -153,24 +195,24 @@
                 color: #fff;
                 font-style: normal;
                 font-weight: 500;
-                font-size: 23px;
+                font-size: 20px;
                 line-height: 1.2;
 
-                @media (max-width:768px){
+                @media (max-width: 768px) {
                     font-size: 16px;
                 }
             }
 
             p {
-                margin-left: 41px;
+                margin-left: 17px;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 10px;
                 line-height: 1.1;
                 color: #949494;
 
                 @media (max-width: 768px) {
-                    margin-left: 15px;
+                    margin-left: 10px;
                 }
             }
         }
