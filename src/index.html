@@ -1,271 +1,599 @@
-@@include('html/header.html')
-<header class="header"></header>
-<main class="page">
+<!DOCTYPE html>
+<html lang="en">
 
-    <section>
-        <div class="page__top">
-            <a href="" class="page__top-left _gradient _scale-right-on-hover">
-                <h1><img src="img/logos/thermometer.png" alt="">У меня ВИЧ?</h1>
-                <p>Если анализ Вашей крови на ВИЧ-инфекцию оказался положительным, не паникуйте. У большинства людей,
-                    живущих с ВИЧ, не
-                    наблюдается никаких симптомов, они могут продолжать вести привычный образ жизни, соблюдая
-                    рекомендации
-                    врача.</p>
-            </a>
-            <a href="" class="page__top-right _scale-left-on-hover">
-                <h2><img src="img/logos/dna.png" alt="">Где сдать анализы</h2>
-                <p>Интерактивная карта с адресами лабораторий в Оренбургской области, где можно сдать анализы на
-                    ВИЧ/СПИД.
-                </p>
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yan Studio — Разработка сайтов </title>
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(91932191, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/91932191" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body class="_noscroll">
+
+    <div class="_fixed popup__form">
+        <div class="popup__form-body">
+            <form action="#">
+                <span class="popup__form-close">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M1 31L31 1M31 31L1 1" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <h4>Заказать <br> <span class="order-type"></span></h4>
+                <div class="form__item">
+                    <input type="text" class="_req" placeholder="Ваше имя *" name="name">
+                </div>
+                <div class="form__item">
+                    <input type="text" class="_req _phone" placeholder="Телефон *" name="phone">
+                </div>
+                <div class="form__item">
+                    <input type="text" class="_req _email" placeholder="E - mail *" name="email">
+                </div>
+                <input type="text" name="order-type" hidden>
+                <div class="send">
+                    <button class="_button">
+                        <span></span>
+                        <label>Отправить</label>
+                    </button>
+                    <p>Нажимая кнопку “отправить” я дою соглсие
+                        на обработку моих персональных данных</p>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+    <div class="form-error">Ошибка</div>
+    <div class="input-error">Заполните объяаельные поля</div>
 
-    <section class="mailinglists">
-        <div class="mailinglists__body">
-            <div class="mailinglists__content">
-                <div class="mailinglists__grid">
-                    <div class="mailinglists__grid-items">
-                        <a href="" class="mailinglists__item _scale-right-on-hover">
-                            <span>
-                                <img src="img/mending-heart.png" alt="">
-                            </span>
-                            <div class="mailinglists__item-info">
-                                <label>Статья</label>
-                                <p>Молчание вредит вашему <br> здоровью</p>
-                            </div>
-                        </a>
-                        <a href="" class="mailinglists__item _scale-right-on-hover">
-                            <span>
-                                <img src="img/book.png" alt="">
-                            </span>
-                            <div class="mailinglists__item-info">
-                                <label>Полезные ресурсы</label>
-                                <p>Книги и брошюры</p>
-                            </div>
-                        </a>
-                        <a href="" class="mailinglists__item _scale-right-on-hover">
-                            <span>
-                                <img src="img/question.png" alt="">
-                            </span>
-                            <div class="mailinglists__item-info">
-                                <label>Обратная связь</label>
-                                <p>Задайте важный вопрос</p>
-                            </div>
-                        </a>
-                        <a href="" class="mailinglists__item _scale-right-on-hover">
-                            <span>
-                                <img src="img/hands.png" alt="">
-                            </span>
-                            <div class="mailinglists__item-info">
-                                <label>Помощь и поддержка</label>
-                                <p>Группа взаимопомощи</p>
-                            </div>
-                        </a>
-                    </div>
-                    <form action="#" class="mailinglists__form">
-                        <h3>Оставьте номер вашего мобильного телефона</h4>
-                            <label>мы добавим вас в группу поддержки в WhatsApp</label>
-                            <input type="tel" class="mailinglists__form-input" placeholder="Номер телефона">
-                            <div class="mailinglists__form-submit">
-                                <input type="submit" class="_gradient " value="Отправить">
-                                <p>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-                            </div>
-                    </form>
-                </div>
-                <a href="" class="mailinglists__image _scale-right-on-hover">
-                    <img src="img/history-small.png" alt="">
-                    <span>ИСТОРИИ</span>
-                </a>
-                <div class="mailinglists__news">
-                    <div class="mailinglists__news-body">
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-                        <article class="mailinglists__news-item">
-                            <a href="" class="mailinglists__news-content">
-                                <div>
-                                    <h3>28 июля – Всемирный день борьбы с гепатитом</h3>
-                                    <span>11.06.2020</span>
-                                </div>
-                                <p>28 июля по инициативе Всемирной организации здравоохранения (ВОЗ) объявлено Днём
-                                    борьбы с
-                                    гепатитом. В 2021 году во всем
-                                    мире особая дата отмечается под девизом: «Борьбу с гепатитом нельзя…</p>
-                            </a>
-                        </article>
-
-                    </div>
-                    <div class="mailinglists__news-controls">
-                        <button class="mailinglists__news-prev _slider-control">
-                            <img src="img/svg/slider-arrow.svg" alt="">
-                        </button>
-                        <button class="mailinglists__news-next _slider-control">
-                            <img src="img/svg/slider-arrow.svg" alt="">
-                        </button>
-                    </div>
-                </div>
+    <div class="form-sent _fixed">
+        <div class="form-sent__body">
+            <span class="form-sent__close">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M1 31L31 1M31 31L1 1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </span>
+            <div class="form-sent__content">
+                <h5>Спасибо за заявку <span class="client-name"></span></h5>
+                <p>Мы свяжемся с вами в ближайшие минуты</p>
             </div>
-            <div class="mailinglists__content-mobile">
-                <a href="" class="mobile-history mailinglists__image mailinglists__bigimage _scale-right-on-hover">
-                    <img src="img/history-biggest.png" alt="">
-                    <span>ИСТОРИИ</span>
-                </a>
-            </div>
-
         </div>
-        <div class="mailinglists__support _gradient">Информационная поддержка</div>
-    </section>
+    </div>
 
-    <section class="links">
-        <div class="links__body">
+    <div class="mouse"></div>
+    <div class="mouse2"></div>
 
-            <div class="links__row">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/drop-blood.png" alt="">
-                            </span>
-                            <label>Пройти тест на вич</label>
-                        </a>
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/hands.png" alt="">
-                            </span>
-                            <label>Знакомства+</label>
-                        </a>
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/baby.png" alt="">
-                            </span>
-                            <label>Беременность+</label>
-                        </a>
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/heart-red.png" alt="">
-                            </span>
-                            <label>Право на здоровье</label>
-                        </a>
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/tabletka.png" alt="">
-                            </span>
-                            <label>ABP терапия</label>
-                        </a>
-                        <a href="" class="swiper-slide">
-                            <span>
-                                <img src="img/drop-blood.png" alt="">
-                            </span>
-                            <label>Гепатит, туберкулёз</label>
-                        </a>
-                    </div>
+    <a href="" class="sound-control">
+        <svg viewBox="0 0 192 160" enable-background="new 0 0 192 160">
+            <path class="nomove" d="M26,64H6c-2.2088,0-4,1.7912-4,4v88c0,2.2088,1.7912,4,4,4h20c2.2088,0,4-1.7912,4-4V68C30,65.7912,28.2088,64,26,64z
+                            		 M22,152H10V72h12V152z" />
+            <path class="nomove" d="M66,80H46c-2.2088,0-4,1.7912-4,4v72c0,2.2088,1.7912,4,4,4h20c2.2088,0,4-1.7912,4-4V84C70,81.7912,68.2088,80,66,80z
+                            		 M62,152H50V88h12V152z" />
+            <path class="nomove" d="M106,48H86c-2.2088,0-4,1.7912-4,4v104c0,2.2088,1.7912,4,4,4h20c2.2088,0,4-1.7912,4-4V52C110,49.7912,108.2088,48,106,48
+                            		z M102,152H90V56h12V152z" />
+            <path class="nomove" d="M146,32h-20c-2.2088,0-4,1.7912-4,4v120c0,2.2088,1.7912,4,4,4h20c2.2088,0,4-1.7912,4-4V36
+                            		C150,33.7912,148.2088,32,146,32z M142,152h-12V40h12V152z" />
+            <path class="nomove" d="M186,64h-20c-2.2088,0-4,1.7912-4,4v88c0,2.2088,1.7912,4,4,4h20c2.2088,0,4-1.7912,4-4V68C190,65.7912,188.2088,64,186,64
+                            		z M182,152h-12V72h12V152z" />
+            <path class="move" style="--delay:0s"
+                d="M28,48H4c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S30.2088,48,28,48z" />
+            <path class="move" style="--delay:0.2s"
+                d="M28,32H4c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S30.2088,32,28,32z" />
+            <path class="move" style="--delay:0.4s"
+                d="M28,16H4c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S30.2088,16,28,16z" />
+            <path class="move" style="--delay:0.6s"
+                d="M28,0H4C1.7912,0,0,1.7912,0,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S30.2088,0,28,0z" />
+            <path class="move" style="--delay:0s"
+                d="M68,64H44c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S70.2088,64,68,64z" />
+            <path class="move" style="--delay:0.2s"
+                d="M68,48H44c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S70.2088,48,68,48z" />
+            <path class="move" style="--delay:0.4s"
+                d="M68,32H44c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S70.2088,32,68,32z" />
+            <path class="move" style="--delay:0.6s"
+                d="M68,16H44c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S70.2088,16,68,16z" />
+            <path class="move" style="--delay:0.8s"
+                d="M68,0H44c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S70.2088,0,68,0z" />
+            <path class="move" style="--delay:0s"
+                d="M108,32H84c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S110.2088,32,108,32z" />
+            <path class="move" style="--delay:0.2s"
+                d="M108,16H84c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S110.2088,16,108,16z" />
+            <path class="move" style="--delay:0.4s"
+                d="M108,0H84c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S110.2088,0,108,0z" />
+            <path class="move" style="--delay:0s"
+                d="M148,16h-24c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S150.2088,16,148,16z" />
+            <path class="move" style="--delay:0.2s"
+                d="M148,0h-24c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S150.2088,0,148,0z" />
+            <path class="move" style="--delay:0s"
+                d="M188,48h-24c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S190.2088,48,188,48z" />
+            <path class="move" style="--delay:0.2s"
+                d="M188,32h-24c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S190.2088,32,188,32z" />
+            <path class="move" style="--delay:0.4s"
+                d="M188,16h-24c-2.2088,0-4,1.7912-4,4s1.7912,4,4,4h24c2.2088,0,4-1.7912,4-4S190.2088,16,188,16z" />
+            <path class="move" style="--delay:0.6s"
+                d="M164,8h24c2.2088,0,4-1.7912,4-4s-1.7912-4-4-4h-24c-2.2088,0-4,1.7912-4,4S161.7912,8,164,8z" />
+        </svg>
+    </a>
+
+    <div class="enter _fixed">
+        <span class="enter__button">enter</span>
+        <div class="enter__svg">
+            <svg viewBox="0 0 1920 761" fill="none">
+                <text x="50%" y="51%" dominant-baseline="middle" text-anchor="middle" class="text">yan studio</text>
+                <circle class="circle circle-1" cx="960.5" cy="380.5" r="377.5" />
+                <circle class="circle circle-2" cx="960.5" cy="380.5" r="377.5" />
+            </svg>
+        </div>
+        <img src="img/svg/logo-main-black.svg" alt="">
+    </div>
+
+    <div id="particles-js"></div>
+
+    <div class="menu">
+        <nav class="menu-link">
+            <ul>
+                <li class="menu__item">
+                    <a data-id="about" data-src="img/svg/phone.svg" href="">О нас</a>
+                </li>
+                <li class="menu__item">
+                    <a data-id="steps" data-src="img/svg/phone.svg" href="">Этапы</a>
+                </li>
+                <li class="menu__item">
+                    <a data-id="pricing" data-src="img/svg/phone.svg" href="">Цены</a>
+                </li>
+                <li class="menu__item">
+                    <a data-id="contacts" data-src="img/svg/phone.svg" href="">Контакты</a>
+                </li>
+                <li class="menu__item">
+                    <a data-id="portfolio" data-src="img/svg/phone.svg" href="">Портфоллио</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="burger">меню</button>
+
+    <button class="to-top">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M6.54297 3.55176C6.54297 3.82676 6.31797 4.05176 6.04297 4.05176C5.76797 4.05176 5.54297 3.82676 5.54297 3.55176C5.54297 3.27676 5.76797 3.05176 6.04297 3.05176C6.31797 3.05176 6.54297 3.27576 6.54297 3.55176Z" />
+            <path
+                d="M14.737 30C6.474 30 0 23.411 0 15C0 11.371 1.237 7.889 3.485 5.196C3.663 4.984 3.977 4.957 4.189 5.133C4.401 5.31 4.43 5.625 4.253 5.837C2.155 8.35 1 11.604 1 15C1 22.851 7.034 29 14.737 29C22.602 29 29 22.72 29 15C29 7.28 22.602 1 14.737 1C12.297 1 9.924 1.62 7.879 2.792C7.642 2.925 7.334 2.846 7.197 2.606C7.06 2.366 7.143 2.061 7.383 1.923C9.579 0.665 12.122 0 14.737 0C23.153 0 30 6.729 30 15C30 23.271 23.153 30 14.737 30Z" />
+            <path
+                d="M15.3534 6.64645C15.1581 6.45118 14.8415 6.45118 14.6462 6.64645L11.4643 9.82843C11.269 10.0237 11.269 10.3403 11.4643 10.5355C11.6595 10.7308 11.9761 10.7308 12.1714 10.5355L14.9998 7.70711L17.8282 10.5355C18.0235 10.7308 18.3401 10.7308 18.5353 10.5355C18.7306 10.3403 18.7306 10.0237 18.5353 9.82843L15.3534 6.64645ZM15.4998 24V7H14.4998V24H15.4998Z" />
+            <defs>
+                <clipPath id="clip0_393_5">
+                    <rect width="30" height="30" />
+                </clipPath>
+            </defs>
+        </svg>
+    </button>
+
+    <header class="header">
+        <div class="header__container _container">
+            <div class="header__body">
+                <a href="/" class="header__logo logo">
+
+                    <img src="img/svg/logo-main.svg" alt="">
+
+                </a>
+                <div class="header__contacts">
+                    <a target="_blank" href="tel:+9774903977">+7 977 490 39 77</a>
+                    <a target="_blank" href="mailto:studio.yan@mail.ru">studio.yan@mail.ru</a>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <div class="links__image">
+    <main class="page">
 
-                <div class="links__image-content">
-                    <div class="links__image-content-left">
-                        <h4 class="_gradient-color">Телефон доверия</h4>
-                        <a class="_gradient" href="tel:+78002016187">8-800-201-61-87</a>
-                    </div>
-                    <div class="links__image-content-right">
-                        <p>Найдите возможность с кем-нибудь поговорить. НО: не торопитесь сразу рассказывать о диагнозе
-                            своим близким и друзьям,
-                            если не знаете, как они будут реагировать. Можно анонимно обратиться на телефон доверия или
-                            в службу помощи людям с ВИЧ,
-                            где Вас внимательно выслушают, без лишних вопросов и навязчивых советов.</p>
-                    </div>
-                </div>
-
-                <img src="img/logos/asdasd.png" alt="">
-            </div>
-
-            <div class="links__bottom">
-                <div class="links__bottom-info _gradient">
-                    <img src="img/logos/links.svg" alt="">
-                    <div class="">
-                        <p>Автономная некоммерческая организация по профилактике социально значимых заболеваний -
-                            поддержка людей, живущих с ВИЧ, в
-                            Оренбурге и Оренбургской обл.
+        <section class="home">
+            <div class="home__container _container">
+                <div class="home__body">
+                    <div class="home__content">
+                        <h1 class="title_animate">Разработка САЙТОВ</h1>
+                        <p class="title_animate">Разрабатываем сайты с <mark>привлекательным и
+                                современным</mark> дизайном.
                         </p>
-                        <p>г. Оренбург, ул. Кирова, 30, помещение 14 (домофон 60)
-                            тел.: +7 (3532) 46-56-56, +7 (3532) 46-56-56
-                            new.life.aids@mail.ru</p>
+                        <p class="title_animate">Когда бизнес требует результатов, <br>
+                            он приходит к нам.</p>
+
+
+                    </div>
+                    <ul class="social social-horizontal">
+                        <li>
+                            <a target="_blank" href="https://t.me/studio_yan">
+                                <img src="img/svg/telegram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://vk.com/studioyan">
+                                <img src="img/svg/vkontakte.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://wa.me/79774903977">
+                                <img src="img/svg/whatsapp.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+        </section>
+
+        <section id="about" class="about ">
+            <div class="about__container ">
+                <div class="about__body _section">
+                    <div class="bgi"></div>
+                    <div class="_title">
+                        <span data-print data-print class="_gadient-color">ABOUT</span>
+                        <h2 data-text="О нас">О нас</h2>
+                    </div>
+                    <div class="about__flex">
+                        <div class="about__left">
+                            <p data-split> Yan Studio — веб-студия дизайна и разработки сайтов. Наша студия
+                                идеально
+                                подходит
+                                для того, чтобы помочь вашему
+                                бизнесу перейти на новый уровень.
+                                Мы предлагаем индивидуальный веб-дизайн для компаний малого и сренднего размера. Мы
+                                учтем ваши потребности, примем во
+                                внимание ваш целевой рынок и создадим действительно уникальный веб-сайт,который увеличит
+                                продажи за короткий промежуток времени.
+                            </p>
+                            <p data-split>
+                                Мы выполняем свую работу качественно и в срок, находясь на постоянной связи с
+                                заказчиком.
+                            </p>
+
+                            <p data-split>
+                                Наша цель - воплошать в реальность ваши идеи и задумки максимально продуктивно.
+                            </p>
+                            <p data-split>
+                                Индивидуальные решения для веб-дизайна и разработки для малых и средних предприятий,
+                                которым нужен "функциональный",
+                                привлекательный и интерактивный веб-сайт для привлечения новых потенциальных клиентов и
+                                посетителей.
+                            </p>
+                        </div>
+                        <div class="about__right">
+
+                        </div>
                     </div>
                 </div>
-                <ol style="--icon-per-column: 4;">
-                    <li><img src="img/logos/logo-9-1-500x210 1.png" alt=""></li>
-                    <li><img src="img/logos/LOGO-4-2-500x46 1.png" alt=""></li>
-                    <li><img src="img/logos/logo-2-500x142 (1) 2.png" alt=""></li>
-                    <li><img src="img/logos/logo-8-500x169 1.png" alt=""></li>
-                    <li><img src="img/logos/logo-6-500x136 1.png" alt=""></li>
-                    <li><img src="img/logos/logo-7-500x169 (1) 1.png" alt=""></li>
-                    <li><img src="img/logos/logo-3-500x120 1.png" alt=""></li>
-                    <li><img src="img/logos/Group 53.png" alt=""></li>
-                </ol>
+            </div>
+        </section>
+
+        <section id="steps" class="steps _section">
+            <div class="steps__container _container">
+                <div class="steps__body">
+                    <div class="_title">
+                        <span data-print class="_gadient-color">HOW WE WORK</span>
+                        <h2 data-text="Как мы работаем">Как мы работаем</h2>
+                    </div>
+                    <div class="steps__grid">
+                        <ol>
+                            <li>
+                                <label>Интервью
+                                </label>
+                                <p>Мы обсуждаем ваш бизнес и цели, которые вы хотите достичь. Главное — посмотреть
+                                    на
+                                    свой бизнес со стороны, найти точки
+                                    роста и определить цель.</p>
+                            </li>
+                            <li>
+                                <label>Стратегия
+                                </label>
+                                <p>Стратегия — ключ к успеху. Разрабатываем план достижения желаемого результата,
+                                    который определили на собеседовании.
+                                    Успех будет зависеть от правильной стратегии.</p>
+                            </li>
+                            <li>
+                                <label>UX
+                                </label>
+                                <p>Анализируем целевую аудиторию, конкурентов, CJM, маркетинг, продажи, внедряем
+                                    маркетинговые фичи. Каждый раздел сайта
+                                    должен выполнять свои задачи для достижения цели.</p>
+                            </li>
+                            <li>
+                                <label>UI</label>
+                                <p>Дизайн играет важную роль в бизнесе. Мы проработаем эмоциональную составляющую и
+                                    создадим правильное впечатление о
+                                    вашей компании.</p>
+                            </li>
+                            <li>
+                                <label>Разработка
+                                </label>
+                                <p>
+                                    Техническая часть реализации вашего проекта. Мы позаботимся о том, чтобы все
+                                    работало как надо, а вы получали все лиды и
+                                    платежи.</p>
+                            </li>
+                            <li>
+                                <label>Маркетинг
+                                </label>
+                                <p>
+                                    Когда сайт готов, пришло время заставить его работать. Наша команда готова
+                                    продвигать ваш бизнес через рекламу SEO,
+                                    Google, ВК, ЯНДЕКС и других каналов.!!!</p>
+                            </li>
+                            <li>
+                                <label>Оптимизация
+                                </label>
+                                <p>
+                                    Мы заинтересованы в том, чтобы предоставить вам наилучшие результаты. Получив
+                                    первые
+                                    данные, мы анализируем их и
+                                    переходим к планированию более крупных изменений и внедрений для улучшения
+                                    результата.</p>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio  _section">
+            <div class="portfolio__container _container">
+                <div class="portfolio__body">
+                    <div class="_title">
+                        <span data-print class="_gadient-color">PORTFIOLIO</span>
+                        <h2 data-text="Наши работы">Наши работы</h2>
+                    </div>
+                    <div class="portfolio__grid">
+                        <div class="portfolio__grid-row">
+                            <a target="_blank" href="https://mpagency.ru/">
+                                <img src="img/works/mpa.png" alt="">
+                                <div class="">
+                                    <h4>mpagensy.ru</h4>
+                                    <p>Комплексное продвижение товаров в ТОП wildberries и ozon</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href="">
+                                <img src="img/works/leib.png" alt="">
+                                <div class="">
+                                    <h4>mpagensy.ru</h4>
+                                    <p>Leibel - бизнес-подарки, мерч, сувенирная продукция.</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://leibel.ru/">
+                                <img src="img/works/bf.png" alt="">
+                                <div class="">
+                                    <h4>leibel.ru</h4>
+                                    <p>Башня 59 — Готовые офисы класса А в Башне Федерация</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://аромастилистлипецк.рф/">
+                                <img src="img/works/ar.png" alt="">
+                                <div class="">
+                                    <h4>аромастилистлипецк.рф</h4>
+                                    <p>Ваш личный аромастилист в Липецке. Подборка ароматов.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing _section">
+            <div class="pricing__container _container">
+                <div class="pricing__body">
+                    <div class="_title">
+                        <span data-print class="_gadient-color">PRICING</span>
+                        <h2 data-text="Цены">Цены</h2>
+                    </div>
+                    <div class="pricing__grid">
+
+                        <div class="pricing__grid-item item-price">
+                            <div class="item-price__body">
+                                <div class="item-price__top">
+                                    <h3>ОДНОСТРАНИЧНЫЙ САЙТ</h3>
+                                    <ol>
+                                        <li><span>Цена:</span>от 30.000 ₽</li>
+                                        <li><span>Срок:</span>от 7 дней</li>
+                                    </ol>
+                                </div>
+                                <div class="item-price__bottom">
+                                    <button class="_button">
+                                        <span></span>
+                                        <label>Заказать</label>
+                                    </button>
+                                </div>
+
+                                <div class="borders-horizontal"></div>
+                                <div class="borders-vertical"></div>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item item-price">
+                            <div class="item-price__body">
+                                <div class="item-price__top">
+                                    <h3>САЙТ ВИЗИТКА</h3>
+                                    <ol>
+                                        <li><span>Цена:</span>от 60.000 ₽</li>
+                                        <li><span>Срок:</span>от 14 дней</li>
+                                    </ol>
+                                </div>
+                                <div class="item-price__bottom">
+                                    <button class="_button">
+                                        <span></span>
+                                        <label>Заказать</label>
+                                    </button>
+                                </div>
+
+                                <div class="borders-horizontal"></div>
+                                <div class="borders-vertical"></div>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item item-price">
+                            <div class="item-price__body">
+                                <div class="item-price__top">
+                                    <h3>ИНТЕРНЕТ МАГАЗИН</h3>
+                                    <ol>
+                                        <li><span>Цена:</span>от 100.000 ₽</li>
+                                        <li><span>Срок:</span>от 1 месяца</li>
+                                    </ol>
+                                </div>
+                                <div class="item-price__bottom">
+                                    <button class="_button">
+                                        <span></span>
+                                        <label>Заказать</label>
+                                    </button>
+                                </div>
+
+                                <div class="borders-horizontal"></div>
+                                <div class="borders-vertical"></div>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item item-price">
+                            <div class="item-price__body">
+                                <div class="item-price__top">
+                                    <h3>КОРПОРАТИВНЫЙ САЙТ</h3>
+                                    <ol>
+                                        <li><span>Цена:</span>от 100.000 ₽</li>
+                                        <li><span>Срок:</span>от 1 месяца</li>
+                                    </ol>
+                                </div>
+                                <div class="item-price__bottom">
+                                    <button class="_button">
+                                        <span></span>
+                                        <label>Заказать</label>
+                                    </button>
+                                </div>
+
+                                <div class="borders-horizontal"></div>
+                                <div class="borders-vertical"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts _section">
+            <div class="contacts__container _container">
+                <div class="contacts__body">
+                    <div class="_title">
+                        <span data-print class="_gadient-color">CONTACTS</span>
+                        <h2 data-text="Контакты">Контакты</h2>
+                    </div>
+
+                    <div class="contacts__flex">
+                        <div class="contacts__flex-left">
+
+                            <p>
+                                Расскажите нам о своей идее и мы придумаем лущую реализацию.
+                            </p>
+                            <div class="contacts__image">
+                                <svg viewBox="0 0 397 340" fill="none">
+                                    <path id="path-1"
+                                        d="M49.3473 338.836C-16.0053 240.507 -16.4029 191.834 56.097 158.834C72.7613 151.249 95.1336 141.13 216.347 106.336C258 94.3799 260.039 94.1535 253.5 70.2702C246.5 44.7048 222.745 38.4784 182.5 41.8356L373 6.5L253.5 51.5L263.5 84.5" />
+                                    <path id="path-2"
+                                        d="M263.74 84.2L267.521 54.2L395.021 1.19995L342.521 87.2C326.183 63.4343 312.54 56.2994 276.521 59.7L349.021 31.2C300.787 65.8421 237.908 123.895 216.368 121.2C194.828 118.505 -26.5608 52.2968 35.0206 154.2C147.274 290.849 263.521 333.7 342.521 333.7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contacts__flex-right">
+                            <form action="#">
+                                <h4>Давайте обсудим Ваш проект</h4>
+                                <div class="form__item">
+                                    <input type="text" class="_req" placeholder="Ваше имя *" name="name">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" class="_req _phone" placeholder="Телефон *" name="phone">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" class="_req _email" placeholder="E - mail *" name="email">
+                                </div>
+                                <div class="form__item">
+                                    <textarea class="_req" placeholder="Короткое сообщение" name="msg"></textarea>
+                                </div>
+                                <div class="send">
+                                    <button class="_button">
+                                        <span></span>
+                                        <label>Отправить</label>
+                                    </button>
+                                    <p>Нажимая кнопку “отправить” , я дою соглсие
+                                        на обработку моих персональных данных.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__body">
+                <div class="footer__flex">
+                    <div class="footer__flex-item">
+                        <p>Телефон :</p>
+                        <a target="_blank" class="phone" href="tel:+9774903977">+7 977 490 39 77</a>
+                    </div>
+                    <div class="footer__flex-item">
+                        <p>Мессенджеры :</p>
+                        <ul class="social social-horizontal">
+                            <li>
+                                <a target="_blank" href="https://t.me/studio_yan">
+                                    <img src="img/svg/telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://vk.com/studioyan">
+                                    <img src="img/svg/vkontakte.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <img src="img/svg/whatsapp.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__flex-item">
+                        <p>E - mail :</p>
+                        <a target="_blank" class="email" href="mailto:studio.yan@mail.ru">studio.yan@mail.ru</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-</main>
+    <script src="js/app.min.js"></script>
+</body>
 
-@@include('html/footer.html')
+</html>

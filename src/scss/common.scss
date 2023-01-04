@@ -1,0 +1,477 @@
+html {
+    cursor: default !important;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+* {
+    cursor: none !important;
+    font-family: "NotoSans";
+}
+
+body {
+    overflow-x: hidden;
+
+    @media (min-width: 1921px) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 1920px) {
+        max-width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(81.52deg, #ffffff 0%, #a89a17 100%);
+        border-radius: 5px 0 0 5px;
+    }
+
+    &._noscroll {
+        overflow: hidden;
+    }
+
+    background-color: #090909;
+
+    .start-overlay {
+        position: fixed;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 10000;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+._container {
+    width: 100%;
+    padding: 0 50px;
+
+    @media (max-width: 1024px) {
+        padding: 0 30px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 15px;
+    }
+}
+
+.mouse {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.mouse2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.15s;
+    z-index: 150;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+._section {
+    @include adaptive-value("padding-top", 150, 50, 1);
+    @include adaptive-value("padding-bottom", 150, 50, 1);
+
+    overflow: hidden;
+}
+
+._gadient-color {
+    text-shadow: 0px 1px 0 rgba(207, 207, 207, 0.35), 0px -1px 0 rgba(207, 207, 207, 0.35),
+        1px 0px 0 rgba(207, 207, 207, 0.35), -1px 0px 0 rgba(207, 207, 207, 0.35), 1px 1px 0 rgba(207, 207, 207, 0.35),
+        1px -1px 0 rgba(207, 207, 207, 0.35), -1px 1px 0 rgba(207, 207, 207, 0.35),
+        -1px -1px 0 rgba(207, 207, 207, 0.35);
+
+    //         -webkit-text-stroke-width: calc(1px + 0 * ((100vw - 320px) / 1120));
+    // -webkit-text-stroke-color: rgba(207, 207, 207, 0.35);
+    // color: transparent;
+}
+
+._title {
+    position: relative;
+    @include adaptive-value("margin-bottom", 90, 45, 1);
+
+    h2 {
+        font-style: normal;
+        font-weight: 400;
+        @include adaptive-value("font-size", 120, 32, 1);
+
+        line-height: 1.25;
+        text-shadow: 0px 1px 0 rgba($color: #ffffff, $alpha: 0.35), 0px -1px 0 rgba($color: #ffffff, $alpha: 0.35),
+            1px 0px 0 rgba($color: #ffffff, $alpha: 0.35), -1px 0px 0 rgba($color: #ffffff, $alpha: 0.35),
+            1px 1px 0 rgba($color: #ffffff, $alpha: 0.35), 1px -1px 0 rgba($color: #ffffff, $alpha: 0.35),
+            -1px 1px 0 rgba($color: #ffffff, $alpha: 0.35), -1px -1px 0 rgba($color: #ffffff, $alpha: 0.35);
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        &._visible {
+            &:before {
+                max-width: 100%;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            inset: 0;
+            color: #ffffff;
+            content: attr(data-text);
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            max-width: 0%;
+            transition: max-width 1s linear 0s;
+            white-space: nowrap;
+        }
+    }
+
+    span {
+        font-weight: 400;
+        @include adaptive-value("font-size", 200, 60, 1);
+
+        line-height: 1;
+        opacity: 0.2;
+
+        position: relative;
+        z-index: -1;
+
+        width: 0%;
+        overflow: hidden;
+        transition: width 1s linear 0s;
+    }
+}
+
+i {
+    font-style: normal;
+    display: inline-block;
+}
+
+._button {
+    display: flex;
+    margin-inline: auto;
+    @include adaptive-value("height", 60, 40, 1);
+    width: 100%;
+    @include adaptive-value("max-width", 240, 160, 1);
+
+    border: 1px solid #ffffff;
+
+    font-style: normal;
+    font-weight: 500;
+    @include adaptive-value("font-size", 22, 16, 1);
+    line-height: 1.2;
+    text-align: center;
+    color: #ffffff;
+
+    @media (any-hover: hover) {
+        &:hover {
+            span {
+                width: 40px;
+            }
+
+            label {
+                text-align: center;
+                padding-left: 40px;
+            }
+        }
+    }
+
+    span {
+        height: 100%;
+        width: 20px;
+        transition: all 0.3s ease 0s;
+        pointer-events: none;
+        background-color: #fff;
+
+        display: block;
+    }
+
+    label {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        pointer-events: none;
+        text-align: left;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+form {
+    width: 100%;
+    max-width: 780px;
+    margin-left: auto;
+
+    border: 1px solid #ffffff;
+
+    @media (min-width: 769px) {
+        @include adaptive-value("padding", 45, 0, 1);
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 30px 15px;
+    }
+
+    &._error {
+        border-color: red;
+    }
+
+    &._sending {
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+    }
+
+    h4 {
+        font-style: normal;
+        font-weight: 400;
+        @include adaptive-value("font-size", 28, 20, 1);
+
+        line-height: 1.2;
+        text-align: center;
+        color: #ffffff;
+        @include adaptive-value("margin-bottom", 45, 30, 1);
+    }
+
+    // .form__item
+
+    .form__item {
+        input,
+        textarea {
+            width: 100%;
+
+            font-style: normal;
+            font-weight: 400;
+            @include adaptive-value("font-size", 24, 16, 1);
+
+            line-height: 1.2;
+            color: #9f9b9b;
+            border-bottom: 1px solid #ffffff;
+
+            &._error {
+                border-color: red;
+            }
+
+            &:focus {
+                background-color: transparent;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                -webkit-text-fill-color: #9f9b9b;
+                -webkit-box-shadow: 0 0 0px 1000px #090909 inset;
+            }
+        }
+
+        input {
+            margin-bottom: 30px;
+            @include adaptive-value("margin-bottom", 30, 15, 1);
+            padding-bottom: 5px;
+        }
+
+        textarea {
+            resize: none;
+            @include adaptive-value("min-height", 150, 100, 1);
+            @include adaptive-value("margin-bottom", 30, 15, 1);
+        }
+    }
+
+    .send {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        button {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                @include adaptive-value("flex-basis", 280, 100, 1);
+                @include adaptive-value("max-width", 280, 100, 1);
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+
+            @media (max-width: 768px) {
+                @include adaptive-value("max-width", 240, 160, 1);
+                margin-bottom: 10px;
+                margin-top: 20px;
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 14, 12, 1);
+            letter-spacing: 1px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #ffffff;
+
+            @media (min-width: 769px) {
+                @include adaptive-value("margin-left", 30, 10, 1);
+            }
+
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.form-error,
+.input-error {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include adaptive-value("padding-left", 25, 15, 1);
+    @include adaptive-value("padding-right", 25, 15, 1);
+    text-align: center;
+
+    color: #fff;
+    background-color: red;
+    z-index: 103;
+    @include adaptive-value("font-size", 24, 16, 1);
+    font-weight: 600;
+    font-style: italic;
+    transform: translate3d(-50%, 100%, 0);
+    transition: transform 0.3s ease 0s;
+
+    &._visible {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.input-error{
+    min-width: 290px;
+} 
+
+.form-sent {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    z-index: 102;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: scale(0);
+    pointer-events: none;
+    transition: transform 0.3s ease 0s;
+
+    &._visible {
+        transform: scale(1);
+        pointer-events: all;
+    }
+
+    // .form-sent__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include adaptive-value("max-width", 700, 290, 1);
+        width: 100%;
+    }
+
+    // .form-sent__close
+
+    &__close {
+        display: block;
+        margin-bottom: 20px;
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            stroke: #fff;
+            stroke-width: 2;
+            pointer-events: none;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    // .form-sent__content
+
+    &__content {
+        text-align: center;
+        background-color: #000;
+        @include adaptive-value("padding", 50, 15, 1);
+
+        h5 {
+            @include adaptive-value("font-size", 30, 18, 1);
+            color: #fff;
+            margin-bottom: 0.5em;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 22, 16, 1);
+            color: #fff;
+        }
+    }
+}
