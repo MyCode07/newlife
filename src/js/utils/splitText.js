@@ -60,4 +60,7 @@ export function observeAbout() {
             observer.observe(item)
         });
     }
+    else {
+        document.querySelector('.about').classList.add('_mb');
+    }
 }

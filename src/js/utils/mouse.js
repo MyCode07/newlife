@@ -1,14 +1,8 @@
 import { isMobile } from './isMobile.js'
 
 
-
-let mouse = document.querySelector('.mouse');
-let mouse2 = document.querySelector('.mouse2');
-
-if (isMobile.any()) {
-    mouse.style.display = 'none';
-    mouse2.style.display = 'none';
-}
+const mouse = document.querySelector('.mouse');
+const mouse2 = document.querySelector('.mouse2');
 
 document.addEventListener("mousemove", function (e) {
     if (!isMobile.any()) {
@@ -17,55 +11,58 @@ document.addEventListener("mousemove", function (e) {
     }
 });
 
+function controlMouse() {
+    if (isMobile.any()) {
+        mouse.style.display = 'none';
+        mouse2.style.display = 'none';
+    }
+    else {
+        mouse.style.display = 'block';
+        mouse2.style.display = 'block';
+    }
+}
+controlMouse();
+
+window.addEventListener("resize", function (e) {
+    controlMouse();
+});
+
+
+function mouseColor(elem) {
+
+    if (Array.from(elem).length) {
+        Array.from(elem).forEach(item => {
+            controlColor(item)
+        })
+    }
+    else {
+        controlColor(elem)
+    }
+
+
+    function controlColor(el) {
+        el.addEventListener('mouseenter', function () {
+            if (!isMobile.any()) {
+                mouse.style.borderColor = '#000';
+                mouse2.style.borderColor = '#000';
+            }
+        })
+        el.addEventListener('mouseleave', function () {
+            if (!isMobile.any()) {
+                mouse.style.borderColor = '#fff';
+                mouse2.style.borderColor = '#fff';
+            }
+        })
+    }
+}
+
+
 const steps = document.querySelectorAll('.steps li');
-
-steps.forEach(step => {
-
-    step.addEventListener('mouseenter', function () {
-        if (!isMobile.any()) {
-            mouse.style.borderColor = '#000';
-            mouse2.style.borderColor = '#000';
-        }
-    })
-
-    step.addEventListener('mouseleave', function () {
-        if (!isMobile.any()) {
-            mouse.style.borderColor = '#fff';
-            mouse2.style.borderColor = '#fff';
-        }
-    })
-})
-
 const about = document.querySelector('.about');
-
-
-about.addEventListener('mouseenter', function () {
-    if (!isMobile.any()) {
-        mouse.style.borderColor = '#000';
-        mouse2.style.borderColor = '#000';
-    }
-})
-
-about.addEventListener('mouseleave', function () {
-    if (!isMobile.any()) {
-        mouse.style.borderColor = '#fff';
-        mouse2.style.borderColor = '#fff';
-    }
-})
-
 const pricing = document.querySelector('.pricing');
+const menu = document.querySelector('.menu');
 
-
-pricing.addEventListener('mouseenter', function () {
-    if (!isMobile.any()) {
-        mouse.style.borderColor = '#000';
-        mouse2.style.borderColor = '#000';
-    }
-})
-
-pricing.addEventListener('mouseleave', function () {
-    if (!isMobile.any()) {
-        mouse.style.borderColor = '#fff';
-        mouse2.style.borderColor = '#fff';
-    }
-})
+mouseColor(steps);
+mouseColor(about);
+mouseColor(pricing);
+mouseColor(menu);

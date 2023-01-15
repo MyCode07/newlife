@@ -4,7 +4,7 @@ const allTitles = document.querySelectorAll('._title');
 if (allTitles.length) {
     allTitles.forEach(item => {
         item.style.opacity = 0;
-        item.style.transform = 'translate(0, 100%)';
+        item.style.transform = 'translate(0, 10%)';
     })
 }
 

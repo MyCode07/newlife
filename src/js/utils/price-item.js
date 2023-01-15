@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { isMobile } from "./isMobile.js";
 
 
 const popupForm = document.querySelector('.popup__form');
@@ -6,9 +7,13 @@ const popupForm = document.querySelector('.popup__form');
 let i = 0;
 document.querySelectorAll('.item-price').forEach(item => {
     const left = item.getBoundingClientRect().left;
-    item.style.transform = `translate(-${left}px,0)`;
+    item.style.transform = `translate(-${left / 10}px,0)`;
     item.style.opacity = 0;
     i++;
+
+    if (isMobile.any()) {
+        item.querySelector('ol').classList.add('_mb');
+    }
 
     const button = item.querySelector('button')
     const title = item.querySelector('h3').textContent;

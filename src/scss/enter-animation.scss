@@ -6,6 +6,8 @@
     z-index: 1001;
     overflow: hidden;
     transition: transform 1s ease 0s;
+    left: 0;
+    top: 0;
 
     img {
         position: absolute;
@@ -31,11 +33,14 @@
         font-weight: 600;
         font-style: italic;
         transform: translate(-50%, -50%);
-
+        left: 50%;
+        top: 75%;
         text-transform: uppercase;
         background-color: transparent;
 
         &._mobile {
+            left: 0 !important;
+            top: 0 !important;
             top: unset !important;
             transform: translate(-50%, 0) !important;
             bottom: 100px !important;

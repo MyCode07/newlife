@@ -16,29 +16,14 @@ export function homeAnimated() {
         delay: 1,
     });
 
-    gsap.to('.title_animate', {
-        opacity: 1,
-        x: 0,
-        duration: 0.3,
-        delay: 1,
-        stagger: 0.5,
-    });
-
-    if (window.innerWidth > 768) {
-        gsap.to('.menu__item', {
-            opacity: 1,
-            x: 0,
-            duration: 0.3,
-            delay: 1,
-            stagger: 0.5,
-        });
-    }
+   
+  
 
     gsap.to('.social-horizontal li', {
         opacity: 1,
         y: 0,
         duration: 0.3,
-        delay: 3,
+        delay: 2,
         stagger: 0.5,
     });
 }

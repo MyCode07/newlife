@@ -5,11 +5,11 @@ const contactsFormBlock = document.querySelector('.contacts__flex-right');
 const array = [contactsDescription, contactsFormBlock]
 
 if (contactsDescription) {
-    contactsDescription.style.transform = 'translate(-100%, 0,0)';
+    contactsDescription.style.transform = 'translate(-10%, 0,0)';
     contactsDescription.style.opacity = 0;
 }
 if (contactsFormBlock) {
-    contactsFormBlock.style.transform = 'translate(100%, 0)';
+    contactsFormBlock.style.transform = 'translate(10%, 0)';
     contactsFormBlock.style.opacity = 0;
 }
 

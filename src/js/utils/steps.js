@@ -1,12 +1,11 @@
-import gsap from "gsap";
-
 const steps = document.querySelectorAll('.steps__grid li');
 
 if (steps.length) {
     let i = 0;
     steps.forEach(item => {
+        item.style.transition = `all 0.75s ${i * 0.05}s`;
         item.style.opacity = 0;
-        item.style.transform = 'translate(100%,0)';
+        item.style.transform = 'translate3d(10%, 0, 0)';
         i++;
     })
 }
@@ -14,13 +13,8 @@ if (steps.length) {
 
 function showItems(item) {
     const i = Array.from(item.parentNode.children).indexOf(item)
-
-    gsap.to(item, {
-        opacity: 1,
-        x: 0,
-        duration: 0.75,
-        delay: i * 0.05,
-    });
+    item.style.opacity = 1;
+    item.style.transform = 'translate3d(0, 0, 0)';
 }
 
 

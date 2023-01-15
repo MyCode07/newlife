@@ -1,5 +1,3 @@
-import gsap from "gsap";
-
 const iamges = document.querySelectorAll('.portfolio__grid a');
 
 if (iamges.length) {
@@ -16,20 +14,15 @@ if (iamges.length) {
 
         item.style.opacity = 0;
         item.style.transformOrigin = 'center';
-        item.style.transform = `translate(${type * 100}%, 0)`;
+        item.style.transform = `translate3d(${type * 10}%, 0, 0)`;
+        item.style.transition = `all 1s ease ${1 * 0.1}s`;
         i++;
     })
 }
 
 function showItems(item) {
-    const i = Array.from(item.parentNode.children).indexOf(item)
-
-    gsap.to(item, {
-        opacity: 1,
-        duration: 1,
-        x: 0,
-        delay: i * 0.1,
-    });
+    item.style.opacity = 1;
+    item.style.transform = `translate3d(0, 0, 0)`;
 }
 
 const observer = new IntersectionObserver(entries => {
